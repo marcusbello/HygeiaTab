@@ -1,0 +1,35 @@
+<nav class="bg-white shadow">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex">
+          <a routerLink="/" class="text-gray-800 font-semibold text-lg">{{title}}</a>
+        </div>
+        <!-- <div class="flex items-center md:hidden">
+          <button type="button" (click)="toggleMenu()" class="text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800" aria-label="Toggle navigation">
+            <svg [class.hidden]="isMenuHidden" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div> -->
+        <div [class.hidden]="!isMenuHidden" class="hidden md:block">
+          <div class="flex items-center">
+            <div class="bg-teal-300 px-4 py-2 rounded-sm"><a routerLink="/login" class="text-gray-600 hover:text-gray-800 px-3 py-2">Login</a></div>
+            <div class="relative">
+              <button type="button" (click)="toggleDropdown()" class="text-gray-600 hover:text-gray-800 px-3 py-2 focus:outline-none">
+                More
+                <svg  class="h-5 w-5 inline-block ml-1 -mt-1 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div [class.hidden]="!isDropdownOpen" class="absolute right-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg dropdown-menu">
+                <a routerLink="/home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Products</a>
+                <a routerLink="/about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+                <a routerLink="/contact" class="block px-4 py-2 bg-gray-300 text-gray-800 hover:bg-gray-100">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
