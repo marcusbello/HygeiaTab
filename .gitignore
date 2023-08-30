@@ -1,7 +1,7 @@
 */migrations
 
 # postgres dev store
-.pgdata/data/
+*.pgdata/data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
