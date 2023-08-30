@@ -12,4 +12,4 @@ jobs:
       - name: Check logs
         run: docker-compose logs
       - name: Run tests
-        run: docker-compose run test make all
+        run: docker-compose run test make test
