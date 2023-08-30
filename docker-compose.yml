@@ -7,7 +7,7 @@ services:
     depends_on:
       - postgres
 
-  # TODO: Write the backend and frontend and reporter images to this test docker container.
+  # TODO: Write frontend and reporter images to this test docker container.
   postgres:
     container_name: postgres
     image: "postgres:15"
