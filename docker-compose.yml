@@ -8,15 +8,15 @@ services:
       - postgres
 
   # TODO: Write the backend and frontend and reporter images to this test docker container.
-  postgres:
-    image: "postgres:15"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
-    ports:
-      - "5432:5432"
-    #   Set a volume for data and initial sql script
-    #   Maybe configure init db
-    volumes:
-      - ".pgdata/data:/var/lib/postgresql/data"
+  # postgres:
+  #   image: "postgres:15"
+  #   environment:
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #     - POSTGRES_DB=postgres
+  #   ports:
+  #     - "5432:5432"
+  #   #   Set a volume for data and initial sql script
+  #   #   Maybe configure init db
+  #   volumes:
+  #     - ".pgdata/data:/var/lib/postgresql/data"
