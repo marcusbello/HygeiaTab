@@ -7,6 +7,13 @@ ifndef PYTHON3_10
 endif
 
 
+ifeq (${IS_CI}, true)
+	FLAGS := "--ci"
+else
+	FLAGS := "-s"
+endif
+
+
 PHONY: env
 
 all: env test
