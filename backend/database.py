@@ -1,13 +1,12 @@
 import os
 
-from dotenv import load_dotenv
+from decouple import config
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-load_dotenv('dev.env')
-
-POSTGRESQL_URL = os.environ.get("DATABASE_URL")
+# POSTGRESQL_URL = os.environ.get("DATABASE_URL")
+postgres_url = config("DATABASE_URL", default='postgres://postgresql:postgres@localhost:5432/postgres')
 
 
 # SQLALCHEMY_DATABASE_URL = "sqlite:///./meditab_app.db"
@@ -15,7 +14,7 @@ POSTGRESQL_URL = os.environ.get("DATABASE_URL")
 
 engine = create_engine(
     # SQLALCHEMY_DATABASE_URL,
-    POSTGRESQL_URL,
+    postgres_url,
     # connect_args={"check_same_thread": False}
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
