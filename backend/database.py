@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # POSTGRESQL_URL = os.environ.get("DATABASE_URL")
-postgres_url = config("DATABASE_URL", default='postgresql://postgres:postgres@postgres:5432/postgres')
+postgres_url = config("DATABASE_URL", default='postgresql://postgres:postgres@postgres:5432/postgres?sslmode=disable')
 
 
 # SQLALCHEMY_DATABASE_URL = "sqlite:///./meditab_app.db"
