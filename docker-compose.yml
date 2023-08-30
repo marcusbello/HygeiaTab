@@ -1,5 +1,11 @@
 version: "3"
 services:
+  test:
+    container_name: test
+    build: ./backend
+
+    depends_on:
+      - postgres-test
 
   # TODO: Write the backend and frontend and reporter images to this test docker container.
   postgres-test:
