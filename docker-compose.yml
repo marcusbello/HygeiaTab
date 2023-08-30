@@ -5,10 +5,10 @@ services:
     build: ./backend
 
     depends_on:
-      - postgres-test
+      - postgres
 
   # TODO: Write the backend and frontend and reporter images to this test docker container.
-  postgres-test:
+  postgres:
     image: "postgres:15"
     environment:
       - POSTGRES_USER=postgres
