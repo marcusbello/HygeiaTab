@@ -14,7 +14,7 @@ postgres_url = config("DATABASE_URL", default='postgresql://postgres:postgres@lo
 
 engine = create_engine(
     # SQLALCHEMY_DATABASE_URL,
-    string(postgres_url),
+    str(postgres_url),
     # connect_args={"check_same_thread": False}
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
